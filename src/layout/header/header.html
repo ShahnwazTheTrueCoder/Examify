@@ -1,0 +1,27 @@
+<header class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+
+        <!-- Logo Section -->
+        <div class="flex items-center space-x-3">
+            <img src="examify-logo.png" alt="Examify Logo" class="h-12 w-auto mix-blend-multiply">
+            <span class="text-2xl font-bold hidden sm:inline">Examify</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="space-x-2 text-sm sm:text-base">
+            <button routerLink="/"
+                class="bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded transition duration-300">
+                Home
+            </button>
+            <button routerLink="/about"
+                class="bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded transition duration-300">
+                About
+            </button>
+            <button [routerLink]="'quiz'"
+                class="bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded transition duration-300">
+                Quiz
+            </button>
+        </nav>
+
+    </div>
+</header>
