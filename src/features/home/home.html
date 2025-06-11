@@ -1,6 +1,43 @@
-<div class="container mx-auto p-6 text-center">
-  <h2 class="text-3xl font-bold mb-4">Welcome to Examify</h2>
-  <p class="text-gray-700 max-w-2xl mx-auto">
-    This is the starting point of your scalable Angular app with Tailwind and modular layout.
+<div class="container mx-auto p-8 flex flex-col items-center justify-center min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 shadow-2xl">
+  <div class="flex flex-col items-center gap-2 animate-fade-in">
+    <div class="bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 p-2 rounded-full shadow-lg mb-4">
+      <img src="examify-logo.png" alt="Examify Logo" class="w-20 h-20 object-contain drop-shadow-xl animate-pulse" />
+    </div>
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight animate-text-glow">
+      Welcome to Examify
+    </h2>
+    <span class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-900 to-purple-900 text-blue-200 font-semibold text-sm shadow animate-fade-in-up border border-blue-700/30">
+      <svg class="w-5 h-5 text-blue-400 animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v4m0 8v4m8-8h-4m-8 0H4m15.07-7.07l-2.83 2.83m-8.48 8.48l-2.83 2.83m0-14.14l2.83 2.83m8.48 8.48l2.83 2.83"/></svg>
+      Powered by AI
+    </span>
+  </div>
+  <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
+    <span class="font-semibold text-blue-300">Examify</span> is an <span class="font-semibold text-purple-300">AI-supported Exam Management System</span> designed to streamline the process of creating, managing, and conducting exams. Whether you are an educator, administrator, or student, Examify provides a user-friendly interface and powerful AI-driven tools to enhance your examination experience.
+    <br/><br/>
+    With features like <span class="font-semibold text-blue-400">automated question generation</span>, <span class="font-semibold text-purple-400">real-time analytics</span>, and <span class="font-semibold text-pink-400">secure exam environments</span>, Examify makes examinations more efficient and accessible for everyone.
+    <br/><br/>
+    <span class="inline-flex items-center gap-1 text-blue-300 font-medium"><svg class="w-4 h-4 text-purple-400 animate-bounce" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 01.993.883L11 3v6h6a1 1 0 01.117 1.993L17 11h-6v6a1 1 0 01-1.993.117L9 17v-6H3a1 1 0 01-.117-1.993L3 9h6V3a1 1 0 01.883-.993L10 2z"/></svg>Join us in revolutionizing the way exams are conducted and experienced—now with the power of AI!</span>
   </p>
 </div>
+<style>
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 12px #a78bfa, 0 0 24px #818cf8; }
+  50% { text-shadow: 0 0 32px #f472b6, 0 0 48px #818cf8; }
+}
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-fade-in { animation: fade-in 1s ease; }
+.animate-fade-in-up { animation: fade-in-up 1.2s cubic-bezier(0.4,0,0.2,1); }
+.animate-text-glow { animation: text-glow 2.5s infinite alternate; }
+.animate-spin-slow { animation: spin-slow 2.5s linear infinite; }
+</style>

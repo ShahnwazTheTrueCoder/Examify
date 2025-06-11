@@ -1,0 +1,28 @@
+<header class="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 shadow-2xl flex items-center justify-between px-8 py-4">
+  <div class="flex items-center gap-3">
+    <img src="/public/examify-logo.png" alt="Examify Logo" class="w-10 h-10 object-contain drop-shadow-xl animate-pulse" />
+    <span class="text-2xl font-extrabold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight animate-text-glow">Examify</span>
+    <span class="ml-3 inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-gradient-to-r from-blue-900 to-purple-900 text-blue-200 font-semibold text-xs border border-blue-700/30 animate-fade-in-up">
+      <svg class="w-4 h-4 text-blue-400 animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v4m0 8v4m8-8h-4m-8 0H4m15.07-7.07l-2.83 2.83m-8.48 8.48l-2.83 2.83m0-14.14l2.83 2.83m8.48 8.48l2.83 2.83"/></svg>
+      AI Powered
+    </span>
+  </div>
+  <!-- ...existing navigation/menu code... -->
+</header>
+<style>
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 12px #a78bfa, 0 0 24px #818cf8; }
+  50% { text-shadow: 0 0 32px #f472b6, 0 0 48px #818cf8; }
+}
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-text-glow { animation: text-glow 2.5s infinite alternate; }
+.animate-spin-slow { animation: spin-slow 2.5s linear infinite; }
+.animate-fade-in-up { animation: fade-in-up 1.2s cubic-bezier(0.4,0,0.2,1); }
+</style>
