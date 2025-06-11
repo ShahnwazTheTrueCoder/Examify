@@ -20,7 +20,7 @@ export class ApiService {
 
   // POST
   post<T>(endpoint: string, data: any): Observable<T> {
-    return this.http.post<T>(`${this.baseUrl}${endpoint}`, data).pipe(
+    return this.http.post<T>(`${this.baseUrl}${endpoint}`, {topic:data}).pipe(
       catchError(this.handleError)
     );
   }
