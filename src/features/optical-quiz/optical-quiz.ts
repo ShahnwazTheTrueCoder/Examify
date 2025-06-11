@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuizService } from '../../core/quiz.service';
+import { MatDialog } from '@angular/material/dialog';
+import { QuizResultsDialogComponent } from './quiz-result';
 
 @Component({
-  selector: 'app-optical-quiz',
+  selector: 'examify-optical-quiz',
   imports: [
     CommonModule,
     FormsModule,
@@ -153,9 +155,11 @@ export class OpticalQuiz {
   quizForm!: FormGroup;
   currentQuestionIndex = 0;
   isLoading: boolean = false
+
   constructor(
     private fb: FormBuilder,
-    private quizService: QuizService
+    private quizService: QuizService,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -205,7 +209,7 @@ export class OpticalQuiz {
 
   selectOption(option: string) {
     const qIndex = this.currentQuestionIndex.toString();
-    this.questions[this.currentQuestionIndex].selected = true
+    this.questions[this.currentQuestionIndex].selected = option
     this.quizForm.get(qIndex)?.setValue(option);
 
   }
@@ -224,7 +228,14 @@ export class OpticalQuiz {
 
   submitQuiz() {
     console.log('User Answers:', this.quizForm.value);
+    this.dialog.open(QuizResultsDialogComponent, {
+      data: {
+        questions: this.questions
+      },
+      width: '60vw'
+    })
   }
+
 
 
 }
